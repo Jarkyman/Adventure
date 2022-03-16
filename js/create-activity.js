@@ -1,10 +1,7 @@
-const out = function (str) {
-  console.log(str);
-}
+out('er i insert form');
 
-out("er i insert form");
-
-const url = 'http://localhost:8080/create/activity';
+//generate api from config file
+const url = baseurl + createurl + 'activity';
 
 //execute function createFormEventListener when html is loaded
 document.addEventListener('DOMContentLoaded', createFormEventListener);
@@ -12,7 +9,7 @@ document.addEventListener('DOMContentLoaded', createFormEventListener);
 let activityForm;
 //add eventlistener to html form
 function createFormEventListener() {
-  activityForm = document.getElementById("newActivityForm");
+  activityForm = document.getElementById('newActivityForm');
   activityForm.addEventListener('submit', handleFormSubmit);
 }
 
@@ -21,7 +18,6 @@ async function handleFormSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
   out(url);
-  out('form:', form)
   try {
     const formData = new FormData(form);
     const responseData = await postFormDataAsJson(url, formData);
@@ -35,10 +31,6 @@ async function handleFormSubmit(event) {
 }
 
 async function postFormDataAsJson(url, formData) {
-  out(url);
-  out(formData);
-  out(formData.entries());
-
   const plainFormData = Object.fromEntries(formData.entries());
   out(plainFormData);
   const formDataJsonString = JSON.stringify(plainFormData);
@@ -46,8 +38,8 @@ async function postFormDataAsJson(url, formData) {
   out(formDataJsonString);
 
   const fetchOptions = {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
     body: formDataJsonString
   };
 
