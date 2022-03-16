@@ -6,7 +6,6 @@ out("er i insert form");
 
 const url = 'http://localhost:8080/create/activity';
 
-
 //execute function createFormEventListener when html is loaded
 document.addEventListener('DOMContentLoaded', createFormEventListener);
 
@@ -17,51 +16,31 @@ function createFormEventListener() {
   activityForm.addEventListener('submit', handleFormSubmit);
 }
 
-/*const submitActivity = document.getElementById('submitActivity');*/
-
 async function handleFormSubmit(event) {
   //preventDefault forhindrer form i at udføre default submit. altås sende sig selv til backend.
   event.preventDefault();
   const form = event.currentTarget;
   out(url);
+  out('form:', form)
   try {
     const formData = new FormData(form);
     const responseData = await postFormDataAsJson(url, formData);
     out(responseData);
-    alert(formData.get('name') + ' er oprettet');
+    alert(formData.get('activityTitle') + ' er oprettet');
 
   } catch (err) {
     alert(err.message);
     out(err);
   }
 }
-
-
-/*
-async function handleFormSubmit(event) {
-  //preventDefault forhindrer form i at udføre default submit. altås sende sig selv til backend.
-  event.preventDefault();
-  out(url);
-  try {
-    const formData = new FormData(form);
-    const responseData = await postFormDataAsJson(url, formData);
-    out(responseData);
-    alert(formData.get('name') + ' er oprettet');
-
-  } catch (err) {
-    alert(err.message);
-    out(err);
-  }
-}
-*/
 
 async function postFormDataAsJson(url, formData) {
+  out(url);
+  out(formData);
   out(formData.entries());
+
   const plainFormData = Object.fromEntries(formData.entries());
   out(plainFormData);
-
-  plainFormData.jens={};
-  plainFormData.jens.traet ='JA';
   const formDataJsonString = JSON.stringify(plainFormData);
 
   out(formDataJsonString);
