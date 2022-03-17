@@ -1,4 +1,4 @@
- //Print console.log
+//Print console.log
 const out = function (str) {
   console.log(str);
 }

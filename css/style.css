@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 5px;
   font-family: "Comic Sans MS";
 }
 
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align:center;
+  text-align: center;
   margin: 0 auto 20px 0;
   /*gap: 20px;*/
 }
@@ -27,7 +27,7 @@
   min-width: 400px;
   overflow: hidden;
   border-radius: 5px 5px 0 0;
-  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .content-table thead tr {
@@ -54,17 +54,17 @@
   border-bottom: 2px solid #009789;
 }
 
-input[type="text"], input[type="button"] {
+input[type="text"], input[type="number"], input[type="button"] {
   border-radius: 10px;
   padding: 12px 15px;
   border: 1px solid black;
 }
 
-input[type="button"] {
+input[type="button"], input[type="submit"] {
   border: none;
 }
 
-input[type="button"]:hover {
+input[type="button"]:hover, input[type="submit"]:hover {
   background-color: #009789;
   cursor: pointer;
 }
@@ -81,7 +81,7 @@ a:hover {
 
 .btn-options {
   padding: 12px 15px;
-  margin:0 10px;
+  margin: 0 10px;
   background-color: #009789;
   color: #f3f3f3;
   font-weight: bold;
@@ -100,6 +100,6 @@ tr {
   vertical-align: middle;
 }
 
-.center-button{
-    text-align:center;
+.center-button {
+  text-align: center;
 }

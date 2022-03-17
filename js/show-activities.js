@@ -29,13 +29,19 @@ function addRow(activity) {
   let colActivity = 0;
 
   let cell = row.insertCell(colActivity++);
-  cell.innerText = activity.activityId;
-
-  cell = row.insertCell(colActivity++);
   cell.innerText = activity.activityTitle;
 
   cell = row.insertCell(colActivity++);
   cell.innerText = activity.activityPriceOneHour;
+
+  cell = row.insertCell(colActivity++);
+  const pbUpdate = document.createElement("input");
+  pbUpdate.type = "button";
+  pbUpdate.setAttribute('value', 'Update activity');
+  pbUpdate.onclick = function () {
+    //TODO: Add update function here
+  }
+  cell.appendChild(pbUpdate);
 
 }
 
