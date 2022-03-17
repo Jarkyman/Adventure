@@ -17,12 +17,15 @@ async function updateCounty(activity) {
     body: jsonString
   }
 
-  //calls backend and wait for return
+  //calls API (Backend) and wait for return
   const response = await fetch(url, fetchOptions);
 
   out(response);
-  if (!response.ok) {
+  if (!response) {
+    alert('Something went wrong');
     out("Det gik ikke godt med update");
+  } else {
+    alert(activity.activityTitle + ' is updated');
   }
 
   return response;
