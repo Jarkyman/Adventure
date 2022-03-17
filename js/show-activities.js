@@ -1,5 +1,5 @@
 
-out('vi er igang med fetch activities');
+out('vi er igang med create table');
 
 const activitiesUrl = baseurl + 'activities';
 
@@ -8,33 +8,46 @@ function fetchAllActivities() {
   return fetch(activitiesUrl).then(response => response.json());
 }
 
-
 const activityMap = new Map();
 async function createActivityMap() {
-  out("show activities");
+  out("show all activities");
   const activityList = await fetchAllActivities();
-  activityList.forEach((activity.title, index) =>
-
+  out(activityList);
+  activityList.forEach((activity, index) => {
+    //out(activity.title + "ix=" + index);
     activityMap.set(activity.title, activity);
   })
 }
 
+createActivityMap();
 
+function addRow(activity) {
 
-function showActivityMap() {
+  const rowActivity = activityTable.rows.length;
+  let row = activityTable.insertRow(rowActivity);
+  let colActivity = 0;
 
-  for (const activityKey of activityMap.keys()) {
-  }
+  let cell = row.insertCell(colActivity++);
+  cell.innerText = activity.activityId;
+
+  cell = row.insertCell(colActivity++);
+  cell.innerText = activity.activityTitle;
+
+  cell = row.insertCell(colActivity++);
+  cell.innerText = activity.activityPriceOneHour;
+
 }
 
-//callGetAllKommuner();
-const pbFetchActivities = document.getElementById('show-activities');
-/*const pbShowCountyMap = document.getElementById('pbShowCountyMap');
-const tblCounties = document.getElementById('countyTable');*/
-
-//add event listeners
-pbFetchActivities.addEventListener('click', showActivityMap);
-/*pbShowCountyMap.addEventListener('click', showCountyMap);*/
+function createTableFromMap() {
+  out("create table");
+  activityMap.forEach(activity => addRow(activity)
+  )
+}
 
 
 
+
+  const activityTable = document.getElementById("activityTable");
+  const pbCreateTable = document.getElementById("pbCreateTable");
+
+  pbCreateTable.addEventListener('click', createTableFromMap);
