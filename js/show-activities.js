@@ -1,14 +1,17 @@
-
 out('vi er igang med create table');
 
 const activitiesUrl = baseurl + 'activities';
+const activityMap = new Map();
+
+const activityTable = document.getElementById("activityTable");
+
+document.addEventListener('DOMContentLoaded', createTableFromMap);
 
 function fetchAllActivities() {
   out("get all activities kaldt");
   return fetch(activitiesUrl).then(response => response.json());
 }
 
-const activityMap = new Map();
 async function createActivityMap() {
   out("show all activities");
   const activityList = await fetchAllActivities();
@@ -18,8 +21,6 @@ async function createActivityMap() {
     activityMap.set(activity.activityId, activity);
   })
 }
-
-createActivityMap();
 
 function addRow(activity) {
 
@@ -38,13 +39,9 @@ function addRow(activity) {
 
 }
 
-function createTableFromMap() {
+async function createTableFromMap() {
+  await createActivityMap();
   out("create table");
   activityMap.forEach(activity => addRow(activity)
   )
 }
-
-  const activityTable = document.getElementById("activityTable");
-  const pbCreateTable = document.getElementById("pbCreateTable");
-
-  pbCreateTable.addEventListener('click', createTableFromMap);
