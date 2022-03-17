@@ -15,7 +15,7 @@ async function createActivityMap() {
   out(activityList);
   activityList.forEach((activity, index) => {
     //out(activity.title + "ix=" + index);
-    activityMap.set(activity.title, activity);
+    activityMap.set(activity.activityId, activity);
   })
 }
 
@@ -43,9 +43,6 @@ function createTableFromMap() {
   activityMap.forEach(activity => addRow(activity)
   )
 }
-
-
-
 
   const activityTable = document.getElementById("activityTable");
   const pbCreateTable = document.getElementById("pbCreateTable");
