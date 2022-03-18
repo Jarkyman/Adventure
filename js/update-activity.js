@@ -1,13 +1,13 @@
-
 out('Update activity');
 
-let url = baseurl + updateurl + 'activity';
+let url = baseurl + updateurl + 'activity/';
 
-async function updateCounty(activity) {
+async function updateActivity(activity) {
+  out(activity);
   url = url + activity.activityId;
+  out(url);
 
-  const jsonString = JSON.stringify(county);
-  fetchOptions.body = jsonString;
+  const jsonString = JSON.stringify(activity);
 
   const fetchOptions = {
     method: "PUT",

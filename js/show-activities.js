@@ -4,6 +4,11 @@ const activitiesUrl = baseurl + 'activities';
 const activityMap = new Map();
 
 const activityTable = document.getElementById("activityTable");
+const modalBox = document.getElementById("myModal");
+const spanClose = document.getElementsByClassName("close")[0];
+const inpActivityTitle = document.getElementById('activityTitle');
+const inpActivityPrice = document.getElementById('activityPricePerHour');
+const pbSubmitUpdate = document.getElementById('submitUpdate');
 
 document.addEventListener('DOMContentLoaded', createTableFromMap);
 
@@ -12,11 +17,17 @@ function fetchAllActivities() {
   return fetch(activitiesUrl).then(response => response.json());
 }
 
+window.onclick = function (event) {
+  if (event.target == modalBox) {
+    modalBox.style.display = "none";
+  }
+}
+
 async function createActivityMap() {
   out("show all activities");
   const activityList = await fetchAllActivities();
   out(activityList);
-  activityList.forEach((activity, index) => {
+  activityList.forEach((activity) => {
     activityMap.set(activity.activityId, activity);
   })
 }
@@ -34,14 +45,31 @@ function addRow(activity) {
   cell.innerText = activity.activityPriceOneHour;
 
   cell = row.insertCell(colActivity++);
-  const pbUpdate = document.createElement("input");
-  pbUpdate.type = "button";
-  pbUpdate.setAttribute('value', 'Update activity');
+  const pbUpdate = document.createElement('button');
+  pbUpdate.innerText = 'Update';
   pbUpdate.onclick = function () {
-    //TODO: Add update function here
+    modalBox.style.display = 'block';
+    inpActivityTitle.value = activity.activityTitle;
+    inpActivityPrice.value = activity.activityPriceOneHour;
+    pbSubmitUpdate.onclick = function () {
+      updateRow(activity);
+      modalBox.style.display = 'none';
+    }
+  }
+  spanClose.onclick = function () {
+    modalBox.style.display = 'none';
   }
   cell.appendChild(pbUpdate);
 
+}
+
+async function updateRow(activity) {
+  activity.activityTitle = inpActivityTitle.value;
+  activity.activityPriceOneHour = inpActivityPrice.value;
+  const response = await updateActivity(activity);
+  out(response);
+  //crazy rule, Reload page
+  location.reload();
 }
 
 async function createTableFromMap() {
