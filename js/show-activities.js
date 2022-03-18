@@ -17,7 +17,6 @@ async function createActivityMap() {
   const activityList = await fetchAllActivities();
   out(activityList);
   activityList.forEach((activity, index) => {
-    //out(activity.title + "ix=" + index);
     activityMap.set(activity.activityId, activity);
   })
 }
