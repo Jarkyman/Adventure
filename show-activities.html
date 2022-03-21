@@ -21,8 +21,26 @@
   </table>
 </div>
 
+<div class="modal" id="myModal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <form>
+      <label for="activityTitle"></label>
+      <input id="activityTitle" name="activityTitle" placeholder="Title" required type="text">
+      <label for="activityPricePerHour"></label>
+      <input id="activityPricePerHour" min="0" name="activityPriceOneHour" placeholder="Price Per Hour" required
+             type="number">
+
+      <button id="submitUpdate" title="Update" type="submit">Update</button>
+    </form>
+  </div>
+
+</div>
 
 <script src="js/config.js"></script>
 <script src="js/show-activities.js"></script>
+<script src="js/update-activity.js"></script>
 </body>
 </html>

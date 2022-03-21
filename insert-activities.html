@@ -13,9 +13,10 @@
   <form id="newActivityForm" method="post">
 
     <label for="activityTitle"></label>
-    <input id="activityTitle" name="activityTitle" placeholder="title for an activity" type="text">
+    <input id="activityTitle" name="activityTitle" placeholder="title for an activity" required type="text">
     <label for="activityPriceOneHour"></label>
-    <input id="activityPriceOneHour" name="activityPriceOneHour" placeholder="price for an activity" type="number">
+    <input id="activityPriceOneHour" min="0" name="activityPriceOneHour" placeholder="price for an activity"
+           required type="number">
 
     <button id="submitActivity" title="Save an activity" type="submit">Save an activity</button>
 
