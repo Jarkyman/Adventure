@@ -8,7 +8,6 @@ let activityDelete = baseurl + deleteurl + 'activity/';
  * @returns {Promise<Response>} deleted activity
  */
 async function deleteActivity(id) {
-  console.log(activityDelete);
   activityDelete = activityDelete + id;
   out(activityDelete);
 
