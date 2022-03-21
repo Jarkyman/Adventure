@@ -10,7 +10,7 @@ let activityDelete = baseurl + deleteurl + 'activity/';
 async function deleteActivity(id) {
   console.log(activityDelete);
   activityDelete = activityDelete + id;
-  console.log(activityDelete);
+  out(activityDelete);
 
   const fetchOptions = {
     method: "DELETE",
