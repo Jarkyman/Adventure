@@ -61,6 +61,17 @@ function addRow(activity) {
   }
   cell.appendChild(pbUpdate);
 
+
+
+  cell = row.insertCell(colActivity++);
+  const pbDelete = document.createElement('button');
+  pbDelete.innerText = 'Delete';
+  pbDelete.onclick = function () {
+    deleteActivity(activity.activityId);
+    location.reload();
+  }
+  cell.appendChild(pbDelete);
+
 }
 
 async function updateRow(activity) {
