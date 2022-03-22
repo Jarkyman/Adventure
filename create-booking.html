@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Booking</title>
+  <script src="js/config.js"></script>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <script defer src="js/booking/create-booking.js"></script>
+</head>
+<body>
+
+<h1>Create Booking</h1>
+<div>
+  <form id="newBookingForm" method="post">
+
+    <label for="fullName"></label>
+    <input id="fullName" name="fullName" placeholder="Full name" required type="text">
+
+    <label for="phoneNumber"></label>
+    <input id="phoneNumber" name="phoneNumber" placeholder="Phone number" required type="tel">
+
+    <label for="email"></label>
+    <input id="email" name="email" placeholder="Email" required type="email">
+
+    <label for="participants">Participants</label>
+    <input id="participants" max="20" min="1" name="participants" placeholder="4" required type="number">
+
+    <label for="bookingDate"></label>
+    <input id="bookingDate" name="bookingDate" required type="date">
+
+    <label for="bookingTime"></label>
+    <input id="bookingTime" max="20:00" min="10:00" name="bookingTime" required type="time" value="10:00">
+
+    <label for="activity">Choose an activity:</label>
+    <select id="activity" name="activity"></select>
+
+    <button id="submitBooking" title="Save an Booking" type="submit">book</button>
+
+  </form>
+</div>
+
+</body>
+</html>
