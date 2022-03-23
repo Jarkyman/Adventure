@@ -3,20 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="stylesheet" href="/css/login.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
+<!--  <link rel="stylesheet" href="/css/login.css">-->
+<!--  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+  <link rel="icon" type="image/png" href="/img/adventure.png"/>
+  <link rel="stylesheet" href="/css/styling.css">
+  <script defer src="../js/config.js"></script>
 </head>
-<body>
-<div>
-  <form id="login" method="post" action="/templates/logged-in.html">
-    <input type="text" id="checkIt" required />
+<body id="body">
 
-    <input type="password" class="password" placeholder="Password" required/>
 
-    <button type="submit">Continue</button>
 
-  </form>
+<div class="container-logo">
+  <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo">
 </div>
+
+
+<div class="container-login">
+  <div class="item-login">
+    <form id="login" class="login" method="post" action="/templates/logged-in.html">
+        <div class="main">
+        <div class="field">
+          <label for="user">Login:</label>
+          <input type="text" id="user" placeholder="JohnDoe" required />
+        </div>
+            <div class="field">
+          <label for="password">Password:</label>
+              <input type="password" class="password" id="password" placeholder="Password" required/>
+        </div>
+        <div class="centered-button-div">
+          <button class="submit" type="submit">Continue</button>
+        </div>
+      </div>
+    </form>
+   </div>
+</div>
+<script  src="../js/config.js"></script>
 </body>
 </html>

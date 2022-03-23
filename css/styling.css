@@ -142,10 +142,10 @@ header li a:hover, footer li a:hover  {
 }
 
 
-input[type="text"], input[type="number"], input[type="button"] {
+input[type="text"], input[type="number"], input[type="button"], input[type="password"] {
   border-radius: 10px;
   padding: 12px 15px;
-  border: 1px solid black;
+  border: 2px solid #e4480b;
 }
 
 input[type="button"], input[type="submit"] {
@@ -155,4 +155,49 @@ input[type="button"], input[type="submit"] {
 input[type="button"]:hover, input[type="submit"]:hover {
   background-color: #009789;
   cursor: pointer;
+}
+
+
+
+.field {clear:both; text-align:right; line-height:25px;margin: 8px 0 8px 0;}
+label {float:left; padding-right:10px; color: yellow;}
+.main {float:left;margin:20px}
+.centered-button-div{text-align: center;}
+
+.container-login{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.item-login{
+  margin: 0 0 10px 10px;
+}
+
+form.login {
+  background-color: #1f8bca;
+  width: max-content;
+  margin-top: 20px;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  box-shadow: 0 0 25px 0 #e4480b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button.submit{
+  width: 150px;
+  text-decoration: none;
+  user-select: none;
+  padding: .7em 1.5em;
+  outline: none;
+  margin: 10px 10px 10px 0;
+  border-radius: 10px;
+  color: yellow;
+  background-color: #16100c;
+  border: 2px solid #e4480b;
 }

@@ -9,6 +9,8 @@ const createurl = 'create/';
 const updateurl = 'update/';
 const deleteurl = 'delete/';
 
+
+
 //Colors
 const lightBlue = '#42b2df'; //rgb(66,178,223)
 const yellow = '#edc73d'; //rgb(237,199,61)
@@ -23,7 +25,7 @@ const blueGray = '#505a56'; //rgb(80,90,86)
 const navy = '#1f415d'; //rgb(31,65,93)
 
 const body = document.getElementById('body');
-body.style.backgroundColor = gray;
+body.style.backgroundColor = black;
 
 const header = document.getElementById('header');
 header.style.backgroundColor = darkblue;
@@ -31,3 +33,5 @@ header.style.backgroundColor = darkblue;
 const footer = document.getElementById('footer');
 footer.style.backgroundColor = darkblue;
 
+const login = document.getElementById('login');
+login.style.backgroundColor = darkblue;
