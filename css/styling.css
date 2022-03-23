@@ -51,6 +51,21 @@ body{
   overflow: hidden;
 }
 
+.item-about-main-content {
+  width: 1000px;
+  height: 900px;
+  margin: 50px;
+  text-align: center;
+  box-shadow: 0 0 25px 0 #e4480b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.item-about-main-content p {
+  text-align: left;
+  margin-left: 50px;
+}
+
 .container-image-img1{
   object-fit: cover;
   width: 105%;
@@ -74,12 +89,18 @@ body{
   margin: 0 0 20px 20px;
 }
 
-.container-footer{
+.container-footer, .container-shop {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: nowrap;
 }
+
+.shop-item2 {
+
+}
+
+
 
 .item-footer1, .item-footer2, .item-footer3, .item-footer4{
 padding: 50px 50px;
