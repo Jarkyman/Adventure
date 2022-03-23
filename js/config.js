@@ -25,6 +25,9 @@ const navy = '#1f415d'; //rgb(31,65,93)
 const body = document.getElementById('body');
 body.style.backgroundColor = black;
 
+/*const bodyLoggedIn = document.getElementById('body-logged-in');
+bodyLoggedIn.style.backgroundColor = black;*/
+
 const header = document.getElementById('header');
 header.style.backgroundColor = darkblue;
 

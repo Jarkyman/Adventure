@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Insert Activities</title>
-  <script src="../js/config.js"></script>
+  <script defer src="../js/config.js"></script>
+  <script defer src="../js/create-activity.js"></script>
+  <link href="/css/styling.css" rel="stylesheet" type="text/css">
   <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body id="body">
 
-<h1>Insert Activity</h1>
-<div>
-  <form id="newActivityForm" method="post">
-
-    <label for="activityTitle"></label>
-    <input id="activityTitle" name="activityTitle" placeholder="title for an activity" required type="text">
-    <label for="activityPriceOneHour"></label>
-    <input id="activityPriceOneHour" min="0" name="activityPriceOneHour" placeholder="price for an activity"
-           required type="number">
-
-    <button id="submitActivity" title="Save an activity" type="submit">Save an activity</button>
-    <button name="Go-back" onclick="location.href='logged-in.html'">Go back</button>
-
-  </form>
-
+<div class="container-logo">
+  <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo">
 </div>
-
-<script src="../js/create-activity.js"></script>
+<div class="container-create-activity">
+  <div class="item-create-activity">
+    <form id="newActivityForm"  class="create-activity" method="post">
+      <div class="main">
+        <div class="field">
+          <label for="activityTitle"></label>
+          <input id="activityTitle" name="activityTitle" placeholder="title for an activity" required type="text">
+        </div>
+        <div class="field">
+          <label for="activityPriceOneHour"></label>
+          <input id="activityPriceOneHour" min="0" name="activityPriceOneHour" placeholder="price for an activity"
+                 required type="number">
+        </div>
+        <div class="centered-button-div">
+          <button class="submit" id="submitActivity" title="Save an activity" type="submit">Save an activity</button>
+        </div>
+        <div class="centered-button-div">
+          <button class="button" type="button" name="Go-back" onclick="location.href='logged-in.html'">Go back</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 </body>
 </html>
