@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Create Booking</title>
-  <script src="../js/config.js"></script>
   <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <script src="../js/config.js"></script>
+  <script defer src="../js/booking/receipt.js"></script>
   <script defer src="../js/booking/create-booking.js"></script>
 </head>
 <body>
@@ -37,6 +38,26 @@
     <button id="submitBooking" title="Save an Booking" type="submit">book</button>
 
   </form>
+</div>
+
+<div class="modal" id="myModal">
+
+  <div class="modal-content">
+
+    <form action="index.html" id="formModal"> <!--   TODO: add startside   -->
+
+      <p class="fonter" id="ThanksMsg"></p>
+      <p class="fonter" id="fullNameModal"></p>
+      <p class="fonter" id="emailModal"></p>
+      <p class="fonter" id="PhoneNumberModal"></p>
+      <p class="fonter" id="participantsModel"></p>
+      <p class="fonter" id="activityModal"></p>
+      <p class="fonter" id="dateTimeModal"></p>
+
+      <button id="submitUpdate" title="Update" type="submit">Close</button>
+    </form>
+  </div>
+
 </div>
 
 </body>

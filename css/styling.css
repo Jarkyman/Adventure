@@ -31,10 +31,6 @@ body{
   width: 100%;
 }
 
-.item1-header{
-
-}
-
 .item2{
   order:1;
   margin: 0 0 20px 20px;
@@ -87,11 +83,6 @@ body{
 
 .item-footer1, .item-footer2, .item-footer3, .item-footer4{
 padding: 50px 50px;
-
-}
-
-.item-footer1{
-  font-size: 10px;
 
 }
 

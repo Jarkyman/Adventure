@@ -59,7 +59,7 @@ async function handleFormSubmit(event) {
     const responseData = await postFormDataAsJson(createBookingUrl, formData);
     out('response data:');
     out(responseData);
-    alert('Booking er gennemført');
+    openModal(responseData);
 
   } catch (err) {
     alert(err.message);
