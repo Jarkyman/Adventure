@@ -16,8 +16,6 @@ const darkblue = '#1f8bca'; //rgb(31,139,202)
 const brown = '#8c6338'; //rgb(140,99,56)
 const black = '#16100c'; //rgb(22,16,12)
 const gray = '#fefefe'; //rgb(230,233,235)
-
-
 const orange = '#e4480b'; //rgb(228,72,11)
 const blueGray = '#505a56'; //rgb(80,90,86)
 const navy = '#1f415d'; //rgb(31,65,93)
