@@ -1,0 +1,165 @@
+/** {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+  font-family: "Comic Sans MS";
+}*/
+
+html{
+  height: 100%;
+ }
+
+body{
+  margin: 0;
+  padding: 5px;
+  font-family: "Comic Sans MS", serif;
+ }
+
+.container-logo{
+  display: flex;
+  justify-content:center;
+}
+
+.container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item1{
+  order:0;
+  margin: 0 0 10px 10px;
+}
+
+.container-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.item1-header{
+
+}
+
+.item2{
+  order:1;
+  margin: 0 0 20px 20px;
+}
+
+.container-main-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.item-a-main-content, .item-b-main-content, .item-c-main-content {
+  width: 300px;
+  height: 300px;
+  margin: 50px ;
+  border: 2px solid #1f415d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container-image-img1{
+  object-fit: cover;
+  width: 105%;
+  height: 125%;
+}
+
+.container-image-img2{
+  object-fit: cover;
+  width: 120%;
+  height: 160%;
+}
+
+.container-image-img3{
+  object-fit: cover;
+  width: 130%;
+  height: 160%;
+}
+
+.item3{
+  order:2;
+  margin: 0 0 20px 20px;
+}
+
+.container-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.item-footer1, .item-footer2, .item-footer3, .item-footer4{
+padding: 50px 50px;
+
+}
+
+.item-footer1{
+  font-size: 10px;
+
+}
+
+header, footer {
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  box-shadow: 0 0 25px 0 black;
+  border-radius:10px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-height {
+  height: 60px;
+}
+
+.footer-height {
+  height: 200px;
+}
+
+header * {
+  display: inline;
+}
+
+footer * {
+  list-style-type: none;
+}
+
+header li {
+  margin: 20px;
+}
+
+footer li {
+  margin: 5px;
+  color: yellow;/* #edc73d*/
+}
+
+header li a, footer li a  {
+  color: yellow;/* #edc73d*/
+  text-decoration: none;
+}
+
+header li a:hover, footer li a:hover  {
+  color: #e4480b;
+ /* text-decoration: none;*/
+}
+
+
+input[type="text"], input[type="number"], input[type="button"] {
+  border-radius: 10px;
+  padding: 12px 15px;
+  border: 1px solid black;
+}
+
+input[type="button"], input[type="submit"] {
+  border: none;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: #009789;
+  cursor: pointer;
+}
