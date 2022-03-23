@@ -31,5 +31,3 @@ header.style.backgroundColor = darkblue;
 const footer = document.getElementById('footer');
 footer.style.backgroundColor = darkblue;
 
-/*const links = document.getElementById('li_a');
-footer.style.backgroundColor = yellow;*/
