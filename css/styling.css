@@ -192,3 +192,17 @@ button.submit{
   background-color: #16100c;
   border: 2px solid #e4480b;
 }
+
+button.submit:hover{
+  width: 150px;
+  text-decoration: none;
+  user-select: none;
+  padding: .7em 1.5em;
+  outline: none;
+  margin: 10px 10px 10px 0;
+  border-radius: 10px;
+  color: yellow;
+  background-color: #8c6338;
+  border: 2px solid #e4480b;
+  cursor: pointer;
+}
