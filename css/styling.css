@@ -63,6 +63,9 @@ body {
   box-shadow: 0 0 25px 0 #e4480b;
   border-radius: 10px;
   overflow: hidden;
+  color: white;
+  background-color: rgb(31, 139, 202);
+
 }
 
 .item-about-main-content p {
