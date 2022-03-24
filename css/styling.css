@@ -3,6 +3,7 @@ html {
 }
 .main h2{
   color: yellow;
+  font-family: "Comic Sans MS", serif;
 }
 
 body {
@@ -60,7 +61,7 @@ body {
   background-color: #1f8bca;
   color: yellow;
   width: 1000px;
-  height: 900px;
+  height: max-content;
   margin: 50px;
   text-align: center;
   box-shadow: 0 0 25px 0 #e4480b;
@@ -73,6 +74,10 @@ body {
 .item-about-main-content p {
   text-align: left;
   margin-left: 50px;
+}
+
+.item-about-main-content h1{
+  color: yellow;
 }
 
 .container-image-img1 {
@@ -112,7 +117,6 @@ body {
 
 .item-footer1, .item-footer2, .item-footer3, .item-footer4 {
   padding: 50px 50px;
-
 }
 
 header, footer {
@@ -124,6 +128,10 @@ header, footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+footer{
+  justify-content: center;
 }
 
 .header-height {
