@@ -1,5 +1,3 @@
-
-
 let bookingDelete = baseurl + deleteurl + 'booking/';
 
 /**

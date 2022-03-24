@@ -42,36 +42,48 @@
 <div class="modal" id="myModal">
 
   <div class="modal-content">
+    <h2>Please,<br> update booking here</h2>
 
     <span class="close">&times;</span>
 
     <form>
-      <label for="fullName"></label>
-      <input id="fullName" name="fullName" placeholder="Anders Jensen" required type="text">
-
-      <label for="phoneNumber"></label>
-      <input id="phoneNumber" min="0" name="phoneNumber" placeholder="40302010" required type="number">
-
-      <label for="email"></label>
-      <input id="email" name="email" placeholder="anders-j@gmail.com" required type="email">
-
-      <label for="bookingDate"></label>
-      <input id="bookingDate" name="bookingDate" placeholder="2022-03-24" required type="date">
-
-      <label for="bookingTime"></label>
-      <input id="bookingTime" name="bookingTime" placeholder="10:00" required type="time">
-
-      <label for="participants"></label>
-      <input id="participants" min="1" name="participants" placeholder="1" required type="number">
-
-      <label for="activity"></label>
-      <input id="activity" name="activity" placeholder="Go cart" required type="text">
-
-      <label for="employee"></label>
-      <input id="employee" name="employee" placeholder="Jens Madsen" required type="text">
-
-      <button id="submitUpdate" title="Update" type="submit">Update</button>
-
+      <div class="main>">
+        <div class="field">
+          <label for="fullName">Fullname:</label>
+          <input id="fullName" name="fullName" placeholder="Anders Jensen" required type="text">
+        </div>
+        <div class="field">
+          <label for="phoneNumber">Phone number:</label>
+          <input id="phoneNumber" min="0" name="phoneNumber" placeholder="40302010" required type="number">
+        </div>
+        <div class="field">
+          <label for="email">Email:</label>
+          <input id="email" name="email" placeholder="anders-j@gmail.com" required type="email">
+        </div>
+        <div class="field">
+          <label for="bookingDate">Date:</label>
+          <input id="bookingDate" name="bookingDate" placeholder="2022-03-24" required type="date">
+        </div>
+        <div class="field">
+          <label for="bookingTime">Time:</label>
+          <input id="bookingTime" name="bookingTime" placeholder="10:00" required type="time">
+        </div>
+        <div class="field">
+          <label for="participants">Participants:</label>
+          <input id="participants" min="1" name="participants" placeholder="1" required type="number">
+        </div>
+        <div class="field">
+          <label for="activity">Activity:</label>
+          <input id="activity" name="activity" placeholder="Go cart" required type="text">
+        </div>
+        <div class="field">
+          <label for="employee">Employee:</label>
+          <input id="employee" name="employee" placeholder="Jens Madsen" required type="text">
+        </div>
+        <div class="centered-button-div">
+          <button id="submitUpdate" title="Update" type="submit">Update</button>
+        </div>
+      </div>
     </form>
 
   </div>

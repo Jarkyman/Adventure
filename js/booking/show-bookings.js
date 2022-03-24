@@ -72,7 +72,6 @@ function addRow(booking) {
   cell.innerText = booking.employee.employeeFirstName;
 
 
-
   cell = row.insertCell(colBooking++);
   const pbUpdate = document.createElement('button');
   pbUpdate.innerText = 'Update';
