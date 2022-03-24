@@ -20,7 +20,7 @@
     <table id="bookingTable">
       <thead>
       <tr>
-        <th colspan="2"><h2>Wellcome to activities/prices</h2></th>
+        <th colspan="10"><h2>Bookings overview</h2></th>
       </tr>
       <tr>
         <th>Full name</th>
@@ -31,8 +31,6 @@
         <th>Participants</th>
         <th>Activity</th>
         <th>Employee</th>
-
-
       </tr>
       </thead>
       <tr></tr>
@@ -48,10 +46,32 @@
     <span class="close">&times;</span>
 
     <form>
-      <label for="bookingFullName"></label>
-      <input id="bookingFullName" name="bookingFullName" placeholder="FullName" required type="text">
-      <label for="bookingPhoneNumber"></label>
-      <input id="bookingPhoneNumber" min="0" name="bookingPhoneNumber" placeholder="bookingPhoneNumber" required type="number">
+      <label for="fullName"></label>
+      <input id="fullName" name="fullName" placeholder="Anders Jensen" required type="text">
+
+      <label for="phoneNumber"></label>
+      <input id="phoneNumber" min="0" name="phoneNumber" placeholder="40302010" required type="number">
+
+      <label for="email"></label>
+      <input id="email" name="email" placeholder="anders-j@gmail.com" required type="email">
+
+      <label for="bookingDate"></label>
+      <input id="bookingDate" name="bookingDate" placeholder="2022-03-24" required type="date">
+
+      <label for="bookingTime"></label>
+      <input id="bookingTime" name="bookingTime" placeholder="10:00" required type="time">
+
+      <label for="participants"></label>
+      <input id="participants" min="1" name="participants" placeholder="1" required type="number">
+
+      <label for="activity"></label>
+      <input id="activity" name="activity" placeholder="Go cart" required type="text">
+
+      <label for="employee"></label>
+      <input id="employee" name="employee" placeholder="Jens Madsen" required type="text">
+
+      <button id="submitUpdate" title="Update" type="submit">Update</button>
+
     </form>
 
   </div>

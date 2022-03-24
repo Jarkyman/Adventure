@@ -71,6 +71,43 @@ function addRow(booking) {
   cell = row.insertCell(colBooking++);
   cell.innerText = booking.employee.employeeFirstName;
 
+
+
+  cell = row.insertCell(colBooking++);
+  const pbUpdate = document.createElement('button');
+  pbUpdate.innerText = 'Update';
+  pbUpdate.onclick = function () {
+    modalBox.style.display = 'block';
+    inpFullName.value = booking.fullName;
+    inpPhoneNumber.value = booking.phoneNumber;
+    inpEmail.value = booking.email;
+    inpDate.value = booking.bookingDate;
+    inpTime.value = booking.bookingTime;
+    inpParticipants.value = booking.participants;
+    inpActivity.value = booking.activity.activityTitle;
+    inpEmployee.value = booking.employee.employeeFirstName;
+
+
+    pbSubmitUpdate.onclick = function () {
+      updateRow(activity);
+      modalBox.style.display = 'none';
+    }
+  }
+  spanClose.onclick = function () {
+    modalBox.style.display = 'none';
+  }
+  cell.appendChild(pbUpdate);
+
+
+  cell = row.insertCell(colBooking++);
+  const pbDelete = document.createElement('button');
+  pbDelete.innerText = 'Delete';
+  pbDelete.onclick = function () {
+    deleteBooking(bookin.bookingId);
+    location.reload();
+  }
+  cell.appendChild(pbDelete);
+
 }
 
 spanClose.onclick = function () {
