@@ -1,6 +1,9 @@
 html {
   height: 100%;
 }
+.main h2{
+  color: yellow;
+}
 
 body {
   margin: 0;
