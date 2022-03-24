@@ -4,9 +4,11 @@ body {
   text-align: -moz-center;
   background-color: #16100c;
 }
+
 body > div {
   width: 33%;
 }
+
 body > div > div {
   margin-bottom: 15px;
 }
@@ -14,10 +16,10 @@ body > div > div {
 .btn-1 {
   background-color: #F27935;
 }
+
 .btn-1 .round {
   background-color: #f59965;
 }
-
 
 
 a {
@@ -37,10 +39,12 @@ a {
   transition: all 0.3s;
   display: inline-block;
 }
+
 a span {
   position: relative;
   z-index: 3;
 }
+
 a .round {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -56,6 +60,7 @@ a .round {
   transition: all 0.3s ease-out;
   z-index: 2;
 }
+
 a .round i {
   position: absolute;
   top: 50%;
@@ -73,7 +78,7 @@ a .round i {
   line-height: 1.45;
 }
 
-.type-1{
+.type-1 {
   margin-top: 20px;
 }
 
@@ -81,12 +86,14 @@ a .round i {
   padding-left: 48px;
   padding-right: 28px;
 }
+
 .type-1 a:hover .round {
   width: calc(100% - 6px);
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
   border-radius: 30px;
 }
+
 .type-1 a:hover .round i {
   left: 12%;
 }
