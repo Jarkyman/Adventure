@@ -5,7 +5,7 @@ body {
   background-color: #16100c;
 }
 body > div {
-  width: 33%;
+  width: auto;
 }
 body > div > div {
   margin-bottom: 15px;
