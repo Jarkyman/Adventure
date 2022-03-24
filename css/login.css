@@ -1,4 +1,3 @@
-
 body {
   margin: 10px;
   text-align: -moz-center;
@@ -6,7 +5,7 @@ body {
 }
 
 body > div {
-  width: 33%;
+  width: auto;
 }
 
 body > div > div {
