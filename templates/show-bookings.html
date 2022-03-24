@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show booking</title>
+  <link href="/css/styling.css" rel="stylesheet" type="text/css">
+  <script defer src="../js/config.js"></script>
+  <script defer src="../js/booking/show-bookings.js"></script>
+
+</head>
+<body id="body">
+
+<div class="container-logo">
+  <a href="index.html"> <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo"></a>
+</div>
+
+<div class="container">
+  <div class="item-show-activities">
+    <table id="bookingsTable">
+      <thead>
+      <tr>
+        <th colspan="2"><h2>Wellcome to activities/prices</h2></th>
+      </tr>
+      <tr>
+        <th>Full name</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Booking Date</th>
+        <th>Time</th>
+        <th>Participants</th>
+        <th>Activity</th>
+        <th>Employee</th>
+
+
+      </tr>
+      </thead>
+      <tr></tr>
+    </table>
+  </div>
+
+</div>
+
+<div class="modal" id="myModal">
+
+  <div class="modal-content">
+
+    <span class="close">&times;</span>
+
+    <form>
+      <label for="bookingFullName"></label>
+      <input id="bookingFullName" name="bookingFullName" placeholder="FullName" required type="text">
+      <label for="bookingPhoneNumber"></label>
+      <input id="bookingPhoneNumber" min="0" name="bookingPhoneNumber" placeholder="bookingPhoneNumber" required type="number">
+    </form>
+
+  </div>
+</div>
+<button name="Go-back" onclick="location.href='index.html'">Go back home page</button>
+</body>
+</html>
