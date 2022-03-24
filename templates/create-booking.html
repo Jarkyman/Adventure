@@ -3,50 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <title>Create Booking</title>
-  <link href="/css/style.css" rel="stylesheet" type="text/css">
-  <script src="../js/config.js"></script>
+  <link rel="icon" type="image/png" href="/img/adventure.png"/>
+  <link rel="stylesheet" href="/css/styling.css">
+  <script defer src="../js/config.js"></script>
   <script defer src="../js/booking/receipt.js"></script>
   <script defer src="../js/booking/create-booking.js"></script>
 </head>
-<body>
+<body id="body">
 
-<h1>Create Booking
-  <button name="Go-back" onclick="location.href='logged-in.html'">Go back</button>
-</h1>
-<div>
-  <form id="newBookingForm" method="post">
+<div class="container-logo">
+  <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo">
+</div>
 
-    <label for="fullName"></label>
-    <input id="fullName" name="fullName" placeholder="Full name" required type="text">
 
-    <label for="phoneNumber"></label>
-    <input id="phoneNumber" name="phoneNumber" placeholder="Phone number" required type="tel">
-
-    <label for="email"></label>
-    <input id="email" name="email" placeholder="Email" required type="email">
-
-    <label for="participants">Participants</label>
-    <input id="participants" max="20" min="1" name="participants" placeholder="4" required type="number">
-
-    <label for="bookingDate"></label>
-    <input id="bookingDate" name="bookingDate" required type="date">
-
-    <label for="bookingTime"></label>
-    <input id="bookingTime" max="20:00" min="10:00" name="bookingTime" required type="time" value="10:00">
-
-    <label for="activity">Choose an activity:</label>
-    <select id="activity" name="activity"></select>
-
-    <button id="submitBooking" title="Save an Booking" type="submit">book</button>
-
-  </form>
+<div class="container-create-booking">
+  <div class="item-create-booking">
+    <form id="newBookingForm" class="create-booking" method="post">
+      <div class="main">
+        <div class="field">
+          <label for="fullName"></label>
+          <input id="fullName" name="fullName" placeholder="Full name" required type="text">
+        </div>
+        <div class="field">
+          <label for="phoneNumber"></label>
+          <input id="phoneNumber" name="phoneNumber" placeholder="Phone number" required type="tel">
+        </div>
+        <div class="field">
+          <label for="email"></label>
+          <input id="email" name="email" placeholder="Email" required type="email">
+        </div>
+        <div class="field">
+          <label for="participants">Participants:</label>
+          <input id="participants" max="20" min="1" name="participants" placeholder="4" required type="number">
+        </div>
+        <div class="field">
+          <label for="bookingDate"></label>
+          <input id="bookingDate" name="bookingDate" required type="date">
+        </div>
+        <div class="field">
+          <label for="bookingTime"></label>
+          <input id="bookingTime" max="20:00" min="10:00" name="bookingTime" required type="time" value="10:00">
+        </div>
+        <div class="field">
+          <label for="activity">Choose an activity:</label>
+          <select id="activity" name="activity"></select>
+        </div>
+        <div class="centered-button-div">
+          <button class="submit" id="submitBooking" title="Save an Booking" type="submit">Book</button>
+        </div>
+        <div class="centered-button-div">
+          <button class="button" type="button" name="Go-back" onclick="location.href='logged-in.html'">Go back</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
 <div class="modal" id="myModal">
 
   <div class="modal-content">
 
-    <form action="index.html" id="formModal"> <!--   TODO: add startside   -->
+    <form action="index.html" id="formModal">    <!--TODO: add startside -->
 
       <p class="fonter" id="ThanksMsg"></p>
       <p class="fonter" id="fullNameModal"></p>
@@ -59,8 +76,6 @@
       <button id="submitUpdate" title="Update" type="submit">Close</button>
     </form>
   </div>
-
 </div>
-
 </body>
 </html>

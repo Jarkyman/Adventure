@@ -3,27 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Show activities</title>
-  <link href="/css/style.css" rel="stylesheet" type="text/css">
-  <script src="../js/config.js"></script>
+  <link href="/css/styling.css" rel="stylesheet" type="text/css">
+  <script defer src="../js/config.js"></script>
+  <script defer src="../js/delete-activity.js"></script>
+  <script defer src="../js/show-activities.js"></script>
+  <script defer src="../js/update-activity.js"></script>
 </head>
-<body>
 
-<div class="conteiner">
-  <h1>Here can you see all activities now!
-    <button name="Go-back" onclick="location.href='logged-in.html'">Go back</button>
-  </h1>
-  <table class="activity-table" id="activityTable">
-    <thead>
-    <tr>
-      <th>Activity title</th>
-      <th>Price per hour</th>
-      <th>Update</th>
-      <th>Delete</th>
-    </tr>
-    </thead>
-    <tr></tr>
-  </table>
+<body id="body">
+<div class="container-logo">
+  <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo">
 </div>
+
+<div class="container">
+  <div class="item-show-activities" style="">
+    <table id="activityTable"> <!--table class-->
+      <thead>
+      <tr>
+        <th>Activity title</th>
+        <th>Price per hour</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 
 <div class="modal" id="myModal">
 
@@ -43,8 +52,14 @@
 
 </div>
 
-<script src="../js/delete-activity.js"></script>
-<script src="../js/show-activities.js"></script>
-<script src="../js/update-activity.js"></script>
+
 </body>
 </html>
+
+
+<button name="Go-back" onclick="location.href='logged-in.html'">Go back</button>
+
+
+
+
+

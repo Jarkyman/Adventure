@@ -1,7 +1,8 @@
 
 body {
   margin: 10px;
-  text-align: -moz-center
+  text-align: -moz-center;
+  background-color: #16100c;
 }
 body > div {
   width: 33%;
@@ -70,6 +71,10 @@ a .round i {
 .txt {
   font-size: 14px;
   line-height: 1.45;
+}
+
+.type-1{
+  margin-top: 20px;
 }
 
 .type-1 a:hover {

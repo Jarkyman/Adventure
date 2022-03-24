@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-<!--  <link rel="stylesheet" href="/css/login.css">-->
-<!--  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
   <link rel="icon" type="image/png" href="/img/adventure.png"/>
   <link rel="stylesheet" href="/css/styling.css">
   <script defer src="../js/config.js"></script>
 </head>
 
 <body id="body">
-<button name="Go-back" onclick="index.html='logged-in.html'">Go back</button>
 <div class="container-logo">
   <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo">
 </div>
@@ -20,23 +17,28 @@
 <div class="container-login">
   <div class="item-login">
     <form id="login" class="login" method="post" action="logged-in.html">
-        <div class="main">
+      <div class="main">
         <div class="field">
           <label for="user">Login:</label>
-          <input type="text" id="user" placeholder="JohnDoe" required />
+          <input type="text" id="user" placeholder="JohnDoe" required/>
         </div>
-            <div class="field">
+        <div class="field">
           <label for="password">Password:</label>
-              <input type="password" class="password" id="password" placeholder="Password" required/>
+          <input type="password" class="password" id="password" placeholder="Password" required/>
         </div>
         <div class="centered-button-div">
           <button class="submit" type="submit">Continue</button>
         </div>
+        <div class="centered-button-div">
+          <button class="button" type="button" name="Go-back" onclick="location.href='index.html'">Go back</button>
+        </div>
       </div>
     </form>
-   </div>
+  </div>
 </div>
 
-<script  src="../js/config.js"></script>
+<script src="../js/config.js"></script>
 </body>
 </html>
+
+
