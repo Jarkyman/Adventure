@@ -117,7 +117,6 @@ body {
 
 .item-footer1, .item-footer2, .item-footer3, .item-footer4 {
   padding: 50px 50px;
-
 }
 
 header, footer {
@@ -129,6 +128,10 @@ header, footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+footer{
+  justify-content: center;
 }
 
 .header-height {
