@@ -3,27 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Show activities</title>
-  <link href="/css/style.css" rel="stylesheet" type="text/css">
-  <script src="../js/config.js"></script>
+  <link href="/css/styling.css" rel="stylesheet" type="text/css">
+  <script defer src="../js/config.js"></script>
+  <script defer src="../js/show-activities-customers.js"></script>
 
 </head>
-<body>
-<div class="conteiner">
+<body id="body">
 
-  <h1>Here can you see all activities now!
-    <button name="Go-back" onclick="location.href='index.html'">Go back home page</button>
+<div class="container-logo">
+  <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo">
+</div>
 
-  </h1>
+<div class="container">
+  <div class="item-show-activities">
+    <table id="activityTable">
+      <thead>
+      <tr>
+        <th colspan="2"><h2>Wellcome to activities/prices</h2></th>
+      </tr>
+      <tr>
+        <th>Activity title</th>
+        <th>Price per hour</th>
+      </tr>
+      </thead>
+      <tr></tr>
+    </table>
+  </div>
 
-  <table class="activity-table" id="activityTable">
-    <thead>
-    <tr>
-      <th>Activity title</th>
-      <th>Price per hour</th>
-    </tr>
-    </thead>
-    <tr></tr>
-  </table>
 </div>
 
 <div class="modal" id="myModal">
@@ -42,7 +48,6 @@
 
   </div>
 </div>
-<button name="create-booking.html" onclick="location.href='create-booking.html'">Go to booking</button>
-<script src="../js/show-activities-customers.js"></script>
+<button name="Go-back" onclick="location.href='index.html'">Go back home page</button>
 </body>
 </html>
