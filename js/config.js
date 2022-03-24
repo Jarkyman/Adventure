@@ -10,7 +10,6 @@ const updateurl = 'update/';
 const deleteurl = 'delete/';
 
 
-
 //Colors
 const lightBlue = '#42b2df'; //rgb(66,178,223)
 const yellow = '#edc73d'; //rgb(237,199,61)

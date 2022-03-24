@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="icon" type="image/png" href="/img/adventure.png"/>
-  <link rel="stylesheet" href="/css/styling.css">
+  <link href="/img/adventure.png" rel="icon" type="image/png"/>
+  <link href="/css/styling.css" rel="stylesheet">
   <script defer src="../js/config.js"></script>
 </head>
 
 <body id="body">
 <div class="container-logo">
-  <a href="index.html"> <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo"></a>
+  <a href="index.html"> <img alt="adventure_logo" class="centerlogo" height="100px" src="/img/adventure.png"></a>
 </div>
 
 
 <div class="container-login">
   <div class="item-login">
-    <form id="login" class="login" method="post" action="logged-in.html">
+    <form action="logged-in.html" class="login" id="login" method="post">
       <div class="main">
         <div class="field">
           <label for="user">Login:</label>
-          <input type="text" id="user" placeholder="JohnDoe" required/>
+          <input id="user" placeholder="JohnDoe" required type="text"/>
         </div>
         <div class="field">
           <label for="password">Password:</label>
-          <input type="password" class="password" id="password" placeholder="Password" required/>
+          <input class="password" id="password" placeholder="Password" required type="password"/>
         </div>
         <div class="centered-button-div">
           <button class="submit" type="submit">Continue</button>
         </div>
         <div class="centered-button-div">
-          <button class="button" type="button" name="Go-back" onclick="location.href='index.html'">Go back</button>
+          <button class="button" name="Go-back" onclick="location.href='index.html'" type="button">Go back</button>
         </div>
       </div>
     </form>
