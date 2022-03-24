@@ -54,6 +54,21 @@
   border-bottom: 2px solid #009789;
 }
 
+input[type="text"], input[type="number"], input[type="button"] {
+  border-radius: 10px;
+  padding: 12px 15px;
+  border: 1px solid black;
+}
+
+input[type="button"], input[type="submit"] {
+  border: none;
+}
+
+input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: #009789;
+  cursor: pointer;
+}
+
 a, a:visited, a:active {
   color: #323a40;
   text-decoration: none;

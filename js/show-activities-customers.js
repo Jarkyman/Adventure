@@ -45,10 +45,11 @@ function addRow(activity) {
   cell.innerText = activity.activityPriceOneHour;
 
 
-  }
-  spanClose.onclick = function () {
-    modalBox.style.display = 'none';
-  }
+}
+
+spanClose.onclick = function () {
+  modalBox.style.display = 'none';
+}
 
 
 async function createTableFromMap() {
