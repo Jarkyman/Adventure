@@ -114,7 +114,8 @@ button.go-back {
   flex-wrap: nowrap;
 }
 
-.shop-item2 {}
+.shop-item2 {
+}
 
 .item-footer1, .item-footer2, .item-footer3, .item-footer4 {
   padding: 50px 50px;
@@ -237,7 +238,7 @@ form.login, form.create-booking, form.create-activity {
   display: flex;
   align-items: center;
   justify-content: space-between;
- }
+}
 
 button {
   width: 150px;

@@ -1,19 +1,21 @@
 out('vi er igang med create table');
 
 const bookingsUrl = baseurl + 'bookings';
-const bookingsMap = new Map();
+const bookingMap = new Map();
 
-const bookingsTable = document.getElementById("bookingsTable");
+const bookingTable = document.getElementById("bookingTable");
 const modalBox = document.getElementById("myModal");
 const spanClose = document.getElementsByClassName("close")[0];
-const inpbookingFullName = document.getElementById('bookingFullName');
-const inpbookingPhoneNumber = document.getElementById('bookingPhoneNumber');
-const inpbookingEmail = document.getElementById('bookingEmail');
-const inpbookingDate = document.getElementById('bookingDate');
-const inpbookingParticipants = document.getElementById('bookingParticipants');
-const inpbookingActivity = document.getElementById('bookingActivity');
-const inpbookingEmployee = document.getElementById('bookingEmployee');
-const inpbookingTime = document.getElementById('bookingTime');
+
+const inpFullName = document.getElementById('fullName');
+const inpPhoneNumber = document.getElementById('phoneNumber');
+const inpEmail = document.getElementById('email');
+const inpDate = document.getElementById('bookingDate');
+const inpTime = document.getElementById('bookingTime');
+const inpParticipants = document.getElementById('participants');
+const inpActivity = document.getElementById('activity');
+const inpEmployee = document.getElementById('employee');
+
 const pbSubmitUpdate = document.getElementById('submitUpdate');
 
 
@@ -35,24 +37,24 @@ async function createBookingMap() {
   const bookingList = await fetchAllBookings();
   out(bookingList);
   bookingList.forEach((booking) => {
-    bookingsMap.set(booking.bookingId, booking);
+    bookingMap.set(booking.bookingId, booking);
   })
 }
 
 function addRow(booking) {
 
-  const rowBooking = bookingsTable.rows.length;
-  let row = bookingsTable.insertRow(rowBooking);
+  const rowBooking = bookingTable.rows.length;
+  let row = bookingTable.insertRow(rowBooking);
   let colBooking = 0;
 
   let cell = row.insertCell(colBooking++);
-  cell.innerText = booking.bookingFullName;
+  cell.innerText = booking.fullName;
 
   cell = row.insertCell(colBooking++);
-  cell.innerText = booking.bookingPhoneNumber;
+  cell.innerText = booking.phoneNumber;
 
   cell = row.insertCell(colBooking++);
-  cell.innerText = booking.bookingEmail;
+  cell.innerText = booking.email;
 
   cell = row.insertCell(colBooking++);
   cell.innerText = booking.bookingDate;
@@ -61,16 +63,13 @@ function addRow(booking) {
   cell.innerText = booking.bookingTime;
 
   cell = row.insertCell(colBooking++);
-  cell.innerText = booking.bookingParticipants;
+  cell.innerText = booking.participants;
 
   cell = row.insertCell(colBooking++);
-  cell.innerText = booking.bookingActivity;
+  cell.innerText = booking.activity.activityTitle;
 
   cell = row.insertCell(colBooking++);
-  cell.innerText = booking.bookingEmployee;
-
-
-
+  cell.innerText = booking.employee.employeeFirstName;
 
 }
 
@@ -82,6 +81,6 @@ spanClose.onclick = function () {
 async function createTableFromMap() {
   await createBookingMap();
   out("create table");
-  bookingsMap.forEach(booking => addRow(booking)
+  bookingMap.forEach(booking => addRow(booking)
   )
 }
