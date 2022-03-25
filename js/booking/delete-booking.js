@@ -22,7 +22,7 @@ async function deleteBooking(id) {
   if (!response) {
     alert('Something went wrong with delete json');
   } else {
-    alert(booking.bookingId + 'is deleted');
+    alert(id + ' is deleted');
   }
   return response;
 

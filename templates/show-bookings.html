@@ -7,7 +7,8 @@
   <link href="/css/styling.css" rel="stylesheet" type="text/css">
   <script defer src="../js/config.js"></script>
   <script defer src="../js/booking/show-bookings.js"></script>
-
+  <script defer src="../js/booking/delete-booking.js"></script>
+  <script defer src="../js/booking/update-booking.js"></script>
 </head>
 <body id="body">
 
@@ -31,6 +32,8 @@
         <th>Participants</th>
         <th>Activity</th>
         <th>Employee</th>
+        <th>Update</th>
+        <th>Delete</th>
       </tr>
       </thead>
       <tr></tr>
@@ -46,44 +49,42 @@
 
     <span class="close">&times;</span>
 
-    <form>
-      <div class="main>">
-        <div class="field">
-          <label for="fullName">Fullname:</label>
-          <input id="fullName" name="fullName" placeholder="Anders Jensen" required type="text">
-        </div>
-        <div class="field">
-          <label for="phoneNumber">Phone number:</label>
-          <input id="phoneNumber" min="0" name="phoneNumber" placeholder="40302010" required type="number">
-        </div>
-        <div class="field">
-          <label for="email">Email:</label>
-          <input id="email" name="email" placeholder="anders-j@gmail.com" required type="email">
-        </div>
-        <div class="field">
-          <label for="bookingDate">Date:</label>
-          <input id="bookingDate" name="bookingDate" placeholder="2022-03-24" required type="date">
-        </div>
-        <div class="field">
-          <label for="bookingTime">Time:</label>
-          <input id="bookingTime" name="bookingTime" placeholder="10:00" required type="time">
-        </div>
-        <div class="field">
-          <label for="participants">Participants:</label>
-          <input id="participants" min="1" name="participants" placeholder="1" required type="number">
-        </div>
-        <div class="field">
-          <label for="activity">Activity:</label>
-          <input id="activity" name="activity" placeholder="Go cart" required type="text">
-        </div>
-        <div class="field">
-          <label for="employee">Employee:</label>
-          <input id="employee" name="employee" placeholder="Jens Madsen" required type="text">
-        </div>
-        <div class="centered-button-div">
-          <button id="submitUpdate" title="Update" type="submit">Update</button>
-        </div>
+    <form class="main>">
+      <div class="field">
+        <label for="fullName">Full name:</label>
+        <input id="fullName" name="fullName" placeholder="Anders Jensen" required type="text">
       </div>
+      <div class="field">
+        <label for="phoneNumber">Phone number:</label>
+        <input id="phoneNumber" min="0" name="phoneNumber" placeholder="40302010" required type="number">
+      </div>
+      <div class="field">
+        <label for="email">Email:</label>
+        <input id="email" name="email" placeholder="anders-j@gmail.com" required type="email">
+      </div>
+      <div class="field">
+        <label for="bookingDate">Date:</label>
+        <input id="bookingDate" name="bookingDate" placeholder="2022-03-24" required type="date">
+      </div>
+      <div class="field">
+        <label for="bookingTime">Time:</label>
+        <input id="bookingTime" name="bookingTime" placeholder="10:00" required type="time">
+      </div>
+      <div class="field">
+        <label for="participants">Participants:</label>
+        <input id="participants" min="1" name="participants" placeholder="1" required type="number">
+      </div>
+      <div class="field">
+        <label for="activity">Choose an activity:</label>
+        <select id="activity" name="activity"></select>
+      </div>
+      <div class="field">
+        <label for="employee">Employee:</label>
+        <select id="employee" name="employee"></select>
+      </div>
+
+      <button class="centered-button-div" id="submitUpdateDone" title="Update" type="submit">Update</button>
+
     </form>
 
   </div>

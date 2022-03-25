@@ -13,10 +13,10 @@ const inpEmail = document.getElementById('email');
 const inpDate = document.getElementById('bookingDate');
 const inpTime = document.getElementById('bookingTime');
 const inpParticipants = document.getElementById('participants');
-const inpActivity = document.getElementById('activity');
-const inpEmployee = document.getElementById('employee');
+const selActivities = document.getElementById('activity');
+const selEmployees = document.getElementById('employee');
 
-const pbSubmitUpdate = document.getElementById('submitUpdate');
+const pbSubmitUpdate = document.getElementById('submitUpdateDone');
 
 
 document.addEventListener('DOMContentLoaded', createTableFromMap);
@@ -30,6 +30,28 @@ window.onclick = function (event) {
   if (event.target == modalBox) {
     modalBox.style.display = "none";
   }
+}
+
+async function getActivities() {
+  out("show all activities");
+  const activityList = await fetch(baseurl + 'activities/').then(response => response.json());
+  activityList.forEach((activity) => {
+    let option = document.createElement('option');
+    option.value = JSON.stringify(activity);
+    option.text = activity.activityTitle;
+    selActivities.options.add(option);
+  });
+}
+
+async function getEmployees() {
+  out("show all employees");
+  const employeeList = await fetch(baseurl + 'employees/').then(response => response.json());
+  employeeList.forEach((employee) => {
+    let option = document.createElement('option');
+    option.value = JSON.stringify(employee);
+    option.text = employee.employeeFirstName;
+    selEmployees.options.add(option);
+  });
 }
 
 async function createBookingMap() {
@@ -75,7 +97,8 @@ function addRow(booking) {
   cell = row.insertCell(colBooking++);
   const pbUpdate = document.createElement('button');
   pbUpdate.innerText = 'Update';
-  pbUpdate.onclick = function () {
+  pbUpdate.onclick = async function () {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     modalBox.style.display = 'block';
     inpFullName.value = booking.fullName;
     inpPhoneNumber.value = booking.phoneNumber;
@@ -83,12 +106,27 @@ function addRow(booking) {
     inpDate.value = booking.bookingDate;
     inpTime.value = booking.bookingTime;
     inpParticipants.value = booking.participants;
-    inpActivity.value = booking.activity.activityTitle;
-    inpEmployee.value = booking.employee.employeeFirstName;
+    await getActivities();
+    await getEmployees();
+    selActivities.value = JSON.stringify(booking.activity);
+    selEmployees.value = JSON.stringify(booking.employee);
 
+    pbSubmitUpdate.onclick = async function () {
 
-    pbSubmitUpdate.onclick = function () {
-      updateRow(activity);
+      booking.fullName = inpFullName.value;
+      booking.phoneNumber = inpPhoneNumber.value;
+      booking.email = inpEmail.value;
+      booking.bookingDate = inpDate.value;
+      booking.bookingTime = inpTime.value;
+      booking.participants = inpParticipants.value;
+
+      booking.activity = JSON.parse(selActivities.value);
+      booking.employee = JSON.parse(selEmployees.value);
+
+      out('Value');
+      out(inpFullName.value);
+      out(booking);
+      await updateBooking(booking);
       modalBox.style.display = 'none';
     }
   }
@@ -102,7 +140,7 @@ function addRow(booking) {
   const pbDelete = document.createElement('button');
   pbDelete.innerText = 'Delete';
   pbDelete.onclick = function () {
-    deleteBooking(bookin.bookingId);
+    deleteBooking(booking.bookingId);
     location.reload();
   }
   cell.appendChild(pbDelete);

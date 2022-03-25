@@ -52,8 +52,10 @@ function addRow(activity) {
     modalBox.style.display = 'block';
     inpActivityTitle.value = activity.activityTitle;
     inpActivityPrice.value = activity.activityPriceOneHour;
-    pbSubmitUpdate.onclick = function () {
-      updateRow(activity);
+    pbSubmitUpdate.onclick = async function () {
+      activity.activityTitle = inpActivityTitle.value;
+      activity.activityPriceOneHour = inpActivityPrice.value;
+      await updateRow(activity);
       modalBox.style.display = 'none';
     }
   }
