@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Create Booking</title>
-  <link rel="icon" type="image/png" href="/img/adventure.png"/>
-  <link rel="stylesheet" href="/css/styling.css">
+  <link href="/img/adventure.png" rel="icon" type="image/png"/>
+  <link href="/css/styling.css" rel="stylesheet">
   <script defer src="../js/config.js"></script>
   <script defer src="../js/booking/receipt.js"></script>
   <script defer src="../js/booking/create-booking.js"></script>
@@ -12,13 +12,13 @@
 <body id="body">
 
 <div class="container-logo">
-  <a href="index.html"> <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo"></a>
+  <a href="index.html"> <img alt="adventure_logo" class="centerlogo" height="100px" src="/img/adventure.png"></a>
 </div>
 
 
 <div class="container-create-booking">
   <div class="item-create-booking">
-    <form id="newBookingForm" class="create-booking" method="post">
+    <form class="create-booking" id="newBookingForm" method="post">
       <div class="main">
         <h2>Welcome to booking</h2>
         <div class="field">
@@ -52,13 +52,16 @@
         <div class="centered-button-div">
           <button class="submit" id="submitBooking" title="Save an Booking" type="submit">Book</button>
         </div>
+        <div class="centered-button-div">
+          <button class="button" name="Go-back" onclick="location.href='index.html'" type="button">Go back</button>
+        </div>
       </div>
     </form>
   </div>
 </div>
 
 <div class="centered-button-div">
-  <button class="go-back" type="button" name="Go-back" onclick="location.href='index.html'">Go back</button>
+  <button class="go-back" name="Go-back" onclick="location.href='index.html'" type="button">Go back</button>
 </div>
 
 <div class="modal" id="myModal">
