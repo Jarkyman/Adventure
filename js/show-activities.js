@@ -65,8 +65,8 @@ function addRow(activity) {
   cell = row.insertCell(colActivity++);
   const pbDelete = document.createElement('button');
   pbDelete.innerText = 'Delete';
-  pbDelete.onclick = function () {
-    deleteActivity(activity.activityId);
+  pbDelete.onclick = async function () {
+    await deleteActivity(activity.activityId);
     location.reload();
   }
   cell.appendChild(pbDelete);

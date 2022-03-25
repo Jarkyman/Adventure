@@ -6,8 +6,8 @@
   <link rel="icon" type="image/png" href="/img/adventure.png"/>
   <link href="/css/styling.css" rel="stylesheet" type="text/css">
   <script defer src="../js/config.js"></script>
-  <script defer src="../js/delete-activity.js"></script>
   <script defer src="../js/show-activities.js"></script>
+  <script defer src="../js/delete-activity.js"></script>
   <script defer src="../js/update-activity.js"></script>
 </head>
 
@@ -40,27 +40,23 @@
 
 <div class="modal" id="myModal">
 
-
-
   <div class="modal-content">
     <h2>Please,<br> update activity here</h2>
 
     <span class="close">&times;</span>
-    <form>
-      <div class="main>">
+
+    <form class="main>">
         <div class="field">
-      <label for="activityTitle">Activity title:</label>
-      <input id="activityTitle" name="activityTitle" placeholder="Title" required type="text">
-           </div>
+          <label for="activityTitle">Activity title:</label>
+          <input id="activityTitle" name="activityTitle" placeholder="Title" required type="text">
+        </div>
         <div class="field">
-      <label for="activityPricePerHour">Price per hour:</label>
-      <input id="activityPricePerHour" min="0" name="activityPriceOneHour" placeholder="Price Per Hour" required
-             type="number">
+          <label for="activityPricePerHour">Price per hour:</label>
+          <input id="activityPricePerHour" min="0" name="activityPriceOneHour" placeholder="Price Per Hour" required
+                 type="number">
         </div>
-        <div class="centered-button-div">
-      <button id="submitUpdate" title="Update" type="submit">Update</button>
-        </div>
-      </div>
+          <button class="centered-button-div" id="submitUpdate" title="Update" type="submit">Update</button>
+
     </form>
   </div>
 

@@ -109,10 +109,6 @@ function addRow(booking) {
 
 }
 
-spanClose.onclick = function () {
-  modalBox.style.display = 'none';
-}
-
 
 async function createTableFromMap() {
   await createBookingMap();
