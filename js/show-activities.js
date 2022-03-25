@@ -48,6 +48,7 @@ function addRow(activity) {
   const pbUpdate = document.createElement('button');
   pbUpdate.innerText = 'Update';
   pbUpdate.onclick = function () {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     modalBox.style.display = 'block';
     inpActivityTitle.value = activity.activityTitle;
     inpActivityPrice.value = activity.activityPriceOneHour;
