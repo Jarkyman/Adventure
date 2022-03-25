@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Show bookings</title>
-  <link rel="icon" type="image/png" href="/img/adventure.png"/>
+  <link href="/img/adventure.png" rel="icon" type="image/png"/>
   <link href="/css/styling.css" rel="stylesheet" type="text/css">
   <script defer src="../js/config.js"></script>
   <script defer src="../js/booking/show-bookings.js"></script>
@@ -12,7 +12,7 @@
 <body id="body">
 
 <div class="container-logo">
-  <a href="index.html"> <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo"></a>
+  <a href="index.html"> <img alt="adventure_logo" class="centerlogo" height="100px" src="/img/adventure.png"></a>
 </div>
 
 <div class="container">
@@ -88,6 +88,8 @@
 
   </div>
 </div>
-<button class="go-back" name="Go-back" onclick="location.href='index.html'">Go back home page</button>
+<div class="centered-button-div">
+  <button class="go-back" name="Go-back" onclick="location.href='logged-in.html'" type="button">Go back</button>
+</div>
 </body>
 </html>
