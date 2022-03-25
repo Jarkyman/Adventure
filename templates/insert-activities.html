@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Insert Activities</title>
+  <link href="/img/adventure.png" rel="icon" type="image/png"/>
   <script defer src="../js/config.js"></script>
   <script defer src="../js/create-activity.js"></script>
   <link href="/css/styling.css" rel="stylesheet" type="text/css">
@@ -11,7 +12,7 @@
 <body id="body">
 
 <div class="container-logo">
-  <a href="index.html"> <img alt="adventure_logo" class="centerlogo" height="100px" src="/img/adventure.png"></a>
+  <a href="logged-in.html"> <img alt="adventure_logo" class="centerlogo" height="100px" src="/img/adventure.png"></a>
 </div>
 <div class="container-create-activity">
   <div class="item-create-activity">
@@ -19,23 +20,25 @@
       <div class="main">
         <h2>Create new activity</h2>
         <div class="field">
-          <label for="activityTitle"></label>
-          <input id="activityTitle" name="activityTitle" placeholder="title for an activity" required type="text">
+          <label for="activityTitle">Activity litle:</label>
+          <input id="activityTitle" name="activityTitle" placeholder="F.ex. 'Go cart'" required type="text">
         </div>
         <div class="field">
-          <label for="activityPriceOneHour"></label>
-          <input id="activityPriceOneHour" min="0" name="activityPriceOneHour" placeholder="price for an activity"
+          <label for="activityPriceOneHour">Price per hour:</label>
+          <input id="activityPriceOneHour" min="0" name="activityPriceOneHour" placeholder="500"
                  required type="number">
         </div>
         <div class="centered-button-div">
           <button class="submit" id="submitActivity" title="Save an activity" type="submit">Save an activity</button>
         </div>
-        <div class="centered-button-div">
-          <button class="button" name="Go-back" onclick="location.href='logged-in.html'" type="button">Go back</button>
-        </div>
       </div>
     </form>
   </div>
 </div>
+
+<div class="centered-button-div">
+  <button class="go-back" name="Go-back" onclick="location.href='logged-in.html'" type="button">Go back</button>
+</div>
+
 </body>
 </html>

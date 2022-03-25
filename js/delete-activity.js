@@ -1,6 +1,6 @@
 // out('Delete activity');
 
-let activityDelete = baseurl + deleteurl + 'activity/';
+let activityDeleteUrl = baseurl + deleteurl + 'activity/';
 
 /**
  * Able to delete an activity
@@ -8,8 +8,8 @@ let activityDelete = baseurl + deleteurl + 'activity/';
  * @returns {Promise<Response>} deleted activity
  */
 async function deleteActivity(id) {
-  activityDelete = activityDelete + id;
-  out(activityDelete);
+  activityDeleteUrl = activityDeleteUrl + id;
+  out(activityDeleteUrl);
 
   const fetchOptions = {
     method: "DELETE",
@@ -19,13 +19,18 @@ async function deleteActivity(id) {
   }
 
 //calls API (Backend) and wait for return
-  const response = await fetch(activityDelete, fetchOptions);
+  const response = await fetch(activityDeleteUrl, fetchOptions);
 
   if (!response) {
     alert('Something went wrong with delete json');
   } else {
-    alert(activity.activityTitle + 'is deleted');
+    if (response.ok) {
+      alert(id + ' deleted');
+    } else {
+      alert('Something went wrong\nERROR status: ' + response.status);
+    }
   }
+
   return response;
 
 }

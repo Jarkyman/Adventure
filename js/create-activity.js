@@ -24,6 +24,7 @@ async function handleFormSubmit(event) {
     const responseData = await postFormDataAsJson(url, formData);
     out(responseData);
     alert(formData.get('activityTitle') + ' er oprettet');
+    activityForm.reset();
 
   } catch (err) {
     alert(err.message);

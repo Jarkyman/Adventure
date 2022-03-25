@@ -48,11 +48,14 @@ function addRow(activity) {
   const pbUpdate = document.createElement('button');
   pbUpdate.innerText = 'Update';
   pbUpdate.onclick = function () {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     modalBox.style.display = 'block';
     inpActivityTitle.value = activity.activityTitle;
     inpActivityPrice.value = activity.activityPriceOneHour;
-    pbSubmitUpdate.onclick = function () {
-      updateRow(activity);
+    pbSubmitUpdate.onclick = async function () {
+      activity.activityTitle = inpActivityTitle.value;
+      activity.activityPriceOneHour = inpActivityPrice.value;
+      await updateRow(activity);
       modalBox.style.display = 'none';
     }
   }
@@ -65,8 +68,8 @@ function addRow(activity) {
   cell = row.insertCell(colActivity++);
   const pbDelete = document.createElement('button');
   pbDelete.innerText = 'Delete';
-  pbDelete.onclick = function () {
-    deleteActivity(activity.activityId);
+  pbDelete.onclick = async function () {
+    await deleteActivity(activity.activityId);
     location.reload();
   }
   cell.appendChild(pbDelete);

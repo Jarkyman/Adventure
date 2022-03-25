@@ -25,7 +25,11 @@ async function updateActivity(activity) {
     alert('Something went wrong');
     out("Det gik ikke godt med update");
   } else {
-    alert(activity.activityTitle + ' is updated');
+    if (response.ok) {
+      alert(activity.activityTitle + ' is updated');
+    } else {
+      alert('Something went wrong\nERROR status: ' + response.status);
+    }
   }
 
   return response;

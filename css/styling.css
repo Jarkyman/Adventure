@@ -1,7 +1,8 @@
 html {
   height: 100%;
 }
-.main h2{
+
+.main h2 {
   color: yellow;
   font-family: "Comic Sans MS", serif;
 }
@@ -11,6 +12,11 @@ body {
   padding: 5px;
   font-family: "Comic Sans MS", serif;
   text-align: center;
+}
+
+button.go-back {
+  box-shadow: 0 0 25px 0 #e4480b;
+  margin: 15px 0 30px 0;
 }
 
 .container-logo {
@@ -26,7 +32,6 @@ body {
 }
 
 .item1 {
-  order: 0;
   margin: 10px 0 10px 0;
 }
 
@@ -38,14 +43,13 @@ body {
 }
 
 .item2 {
-  order: 1;
   margin: 20px 0 20px 0;
 }
 
 .container-main-content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .item-a-main-content, .item-b-main-content, .item-c-main-content {
@@ -67,16 +71,15 @@ body {
   box-shadow: 0 0 25px 0 #e4480b;
   border-radius: 10px;
   overflow: hidden;
-  color: white;
-  background-color: rgb(31, 139, 202);
 }
 
 .item-about-main-content p {
   text-align: left;
   margin-left: 50px;
+  color: white;
 }
 
-.item-about-main-content h1{
+.item-about-main-content h1 {
   color: yellow;
 }
 
@@ -88,32 +91,31 @@ body {
 
 .container-image-img2 {
   object-fit: cover;
-  width: 120%;
-  height: 160%;
+  width: 420px;
+  height: auto;
 }
 
 .container-image-img3 {
   object-fit: cover;
-  width: 130%;
-  height: 160%;
+  margin-left: -75px;
+  width: 470px;
+  height: auto;
 }
 
 .item3 {
-  order: 2;
   margin: 20px 0 20px 0;
 }
 
-.container-footer, .container-shop {
+.container-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: flex-start;
   flex-wrap: nowrap;
 }
 
 .shop-item2 {
-
 }
-
 
 .item-footer1, .item-footer2, .item-footer3, .item-footer4 {
   padding: 50px 50px;
@@ -130,7 +132,7 @@ header, footer {
   justify-content: space-between;
 }
 
-footer{
+footer {
   justify-content: center;
 }
 
@@ -199,6 +201,7 @@ select {
   margin: 8px 0 8px 0;
 }
 
+
 label {
   float: left;
   padding-right: 10px;
@@ -224,15 +227,13 @@ label {
 
 .item-login, .item-create-booking, .item-create-activity, .item-show-activities {
   margin: 10px 0 10px 0;
+  padding-bottom: 20px;
 }
 
 form.login, form.create-booking, form.create-activity {
   background-color: #1f8bca;
   width: max-content;
   margin-top: 20px;
-  left: 5px;
-  right: 5px;
-  top: 5px;
   box-shadow: 0 0 25px 0 #e4480b;
   border-radius: 10px;
   display: flex;
@@ -259,26 +260,28 @@ button:hover {
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  z-index: 1;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
-  width: 25%; /* Full width */
-  height: 25%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: red; /* Fallback color */
-
+  position: absolute;
+  background-color: #16100c;
 }
 
-/* Modal Content */
+
 .modal-content {
-  background-color: #5cb85c;
+  width: max-content;
+  height: max-content;
+  background-color: #1f8bca;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  border-radius: 10px;
+  color: yellow;
+  box-shadow: 0 0 25px 0 #e4480b;
 }
 
 /* The Close Button */

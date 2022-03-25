@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show bookings</title>
+  <link href="/img/adventure.png" rel="icon" type="image/png"/>
+  <link href="/css/styling.css" rel="stylesheet" type="text/css">
+  <script defer src="../js/config.js"></script>
+  <script defer src="../js/booking/show-bookings.js"></script>
+  <script defer src="../js/booking/delete-booking.js"></script>
+  <script defer src="../js/booking/update-booking.js"></script>
+</head>
+<body id="body">
+
+<div class="container-logo">
+  <a href="logged-in.html"> <img alt="adventure_logo" class="centerlogo" height="100px" src="/img/adventure.png"></a>
+</div>
+
+<div class="container">
+  <div class="item-show-activities">
+    <table id="bookingTable">
+      <thead>
+      <tr>
+        <th colspan="10"><h2>Bookings overview</h2></th>
+      </tr>
+      <tr>
+        <th>Full name</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Booking Date</th>
+        <th>Time</th>
+        <th>Participants</th>
+        <th>Activity</th>
+        <th>Employee</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+      <tr></tr>
+    </table>
+  </div>
+
+</div>
+
+<div class="modal" id="myModal">
+
+  <div class="modal-content">
+    <h2>Please,<br> update booking here</h2>
+
+    <span class="close">&times;</span>
+
+    <form class="main>">
+      <div class="field">
+        <label for="fullName">Full name:</label>
+        <input id="fullName" name="fullName" placeholder="Anders Jensen" required type="text">
+      </div>
+      <div class="field">
+        <label for="phoneNumber">Phone number:</label>
+        <input id="phoneNumber" min="0" name="phoneNumber" placeholder="40302010" required type="number">
+      </div>
+      <div class="field">
+        <label for="email">Email:</label>
+        <input id="email" name="email" placeholder="anders-j@gmail.com" required type="email">
+      </div>
+      <div class="field">
+        <label for="bookingDate">Date:</label>
+        <input id="bookingDate" name="bookingDate" placeholder="2022-03-24" required type="date">
+      </div>
+      <div class="field">
+        <label for="bookingTime">Time:</label>
+        <input id="bookingTime" name="bookingTime" placeholder="10:00" required type="time">
+      </div>
+      <div class="field">
+        <label for="participants">Participants:</label>
+        <input id="participants" min="1" name="participants" placeholder="1" required type="number">
+      </div>
+      <div class="field">
+        <label for="activity">Choose an activity:</label>
+        <select id="activity" name="activity"></select>
+      </div>
+      <div class="field">
+        <label for="employee">Employee:</label>
+        <select id="employee" name="employee"></select>
+      </div>
+
+      <button class="centered-button-div" id="submitUpdateDone" title="Update" type="submit">Update</button>
+
+    </form>
+
+  </div>
+</div>
+<div class="centered-button-div">
+  <button class="go-back" name="Go-back" onclick="location.href='logged-in.html'" type="button">Go back</button>
+</div>
+</body>
+</html>
