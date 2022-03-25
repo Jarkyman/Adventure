@@ -22,7 +22,11 @@ async function deleteBooking(id) {
   if (!response) {
     alert('Something went wrong with delete json');
   } else {
-    alert(id + ' is deleted');
+    if (response.ok) {
+      alert(id + ' is deleted');
+    } else {
+      alert('Something went wrong\nERROR status: ' + response.status);
+    }
   }
   return response;
 

@@ -7,8 +7,6 @@ async function updateBooking(booking) {
   url = url + booking.bookingId;
   out(url);
 
-  alert();
-
   const jsonString = JSON.stringify(booking);
 
   const fetchOptions = {
@@ -18,20 +16,22 @@ async function updateBooking(booking) {
     },
     body: jsonString
   }
-
-  alert(jsonString);
   //calls API (Backend) and wait for return
   const response = await fetch(url, fetchOptions);
 
-  alert(response);
+  out(response);
+
   out(response);
   if (!response) {
     alert('Something went wrong');
     out("Det gik ikke godt med update");
   } else {
-    alert(booking.bookingId + ' is updated');
+    if (response.ok) {
+      alert(booking.bookingId + ' is updated');
+    } else {
+      alert('Something went wrong\nERROR status: ' + response.status);
+    }
   }
 
-  alert();
   return response;
 }

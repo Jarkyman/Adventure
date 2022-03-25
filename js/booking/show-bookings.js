@@ -128,6 +128,7 @@ function addRow(booking) {
       out(booking);
       await updateBooking(booking);
       modalBox.style.display = 'none';
+      location.reload();
     }
   }
   spanClose.onclick = function () {
@@ -139,8 +140,8 @@ function addRow(booking) {
   cell = row.insertCell(colBooking++);
   const pbDelete = document.createElement('button');
   pbDelete.innerText = 'Delete';
-  pbDelete.onclick = function () {
-    deleteBooking(booking.bookingId);
+  pbDelete.onclick = async function () {
+    await deleteBooking(booking.bookingId);
     location.reload();
   }
   cell.appendChild(pbDelete);

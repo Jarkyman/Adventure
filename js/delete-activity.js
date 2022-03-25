@@ -24,7 +24,11 @@ async function deleteActivity(id) {
   if (!response) {
     alert('Something went wrong with delete json');
   } else {
-    alert(id + ' deleted');
+    if (response.ok) {
+      alert(id + ' deleted');
+    } else {
+      alert('Something went wrong\nERROR status: ' + response.status);
+    }
   }
 
   return response;
